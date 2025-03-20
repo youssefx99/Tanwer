@@ -81,12 +81,11 @@ Tanweer is an innovative AI-powered learning platform designed to cater to users
 - **Revenue Streams**: Subscriptions, in-platform purchases, advertising.
 
 ## Financial Projections
-- **Initial Investment**: $500,000 (development, marketing, initial content creation).
+- **Initial Investment**: $250,000 (development, marketing, initial content creation).
 - **Projected Revenue**:
-  - Year 1: $200,000
+  - Year 1: $250,000
   - Year 2: $500,000
-  - Year 3: $1,000,000
-- **ROI**: Expected to break even by the end of Year 2, with significant returns by Year 3.
+- **ROI**: Expected to break even by the end of Year 1, with significant returns by Year 2.
 
 ## Conclusion
 Tanweer is poised to revolutionize the online learning landscape by offering a highly personalized and interactive educational experience. With a robust business plan and a clear vision, Tanweer aims to become the go-to platform for learners of all ages.
