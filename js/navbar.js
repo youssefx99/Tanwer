@@ -55,6 +55,14 @@ const navbar = `
               <i class="fa fa-eye"></i>
             </a>
           </li>
+          <!-- New Pricing Plans Button -->
+          <li class="nav-item">
+            <a class="nav-link" href="../HTML/pricing_plans.html">
+              <button class="btn btn-primary">
+                خطط التسعير
+              </button>
+            </a>
+          </li>
         </ul>
 
         <!-- Brand Logo -->

@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>خطط الأسعار - خدمة إنشاء فيديوهات الذكاء الاصطناعي</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Tajawal", sans-serif;
+      }
+
+      body {
+        background-color: #040d21;
+        background-image: radial-gradient(
+            circle at 25% 25%,
+            rgba(42, 54, 95, 0.8) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 75% 75%,
+            rgba(124, 88, 156, 0.8) 0%,
+            transparent 50%
+          );
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 3rem 1rem;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      /* Floating particles */
+      .particles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .particle {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        animation: float-particle 15s infinite linear;
+      }
+
+      @keyframes float-particle {
+        0% {
+          transform: translateY(0) translateX(0);
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+        }
+        90% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-100vh) translateX(100px);
+          opacity: 0;
+        }
+      }
+
+      .container {
+        max-width: 1200px;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      h1 {
+        color: #ffffff;
+        margin-bottom: 1rem;
+        font-size: 2.8rem;
+        text-shadow: 0 2px 10px rgba(123, 97, 255, 0.5);
+        background: linear-gradient(45deg, #ffffff, #a9b7ff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: relative;
+        display: inline-block;
+      }
+
+      h1::after {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(90deg, #7a36cf, #3b82f6);
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 2px;
+      }
+
+      .subtitle {
+        color: #b8c2cc;
+        font-size: 1.3rem;
+        margin-bottom: 3rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        animation: fadeInUp 1s 0.4s forwards;
+        opacity: 0;
+      }
+
+      .pricing-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2.5rem;
+        margin-top: 3rem;
+        perspective: 1000px;
+      }
+
+      .pricing-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2),
+          0 5px 15px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 320px;
+        position: relative;
+        transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transform-style: preserve-3d;
+        opacity: 0;
+      }
+
+      .pricing-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          45deg,
+          transparent,
+          rgba(255, 255, 255, 0.05),
+          transparent
+        );
+        transform: translateX(-100%);
+        transition: transform 0.6s;
+        pointer-events: none;
+      }
+
+      .pricing-card:hover::before {
+        transform: translateX(100%);
+      }
+
+      .pricing-card:hover {
+        transform: translateY(-20px) rotateY(2deg);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3),
+          0 10px 20px rgba(0, 0, 0, 0.2);
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .card-header {
+        padding: 2.5rem 1.5rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .free-header {
+        background: linear-gradient(
+          135deg,
+          rgba(41, 128, 185, 0.2),
+          rgba(142, 68, 173, 0.2)
+        );
+      }
+
+      .silver-header {
+        background: linear-gradient(
+          135deg,
+          rgba(192, 192, 192, 0.2),
+          rgba(224, 224, 224, 0.2)
+        );
+      }
+
+      .gold-header {
+        background: linear-gradient(
+          135deg,
+          rgba(212, 175, 55, 0.2),
+          rgba(255, 215, 0, 0.2)
+        );
+      }
+
+      .plan-name {
+        font-size: 2rem;
+        color: white;
+        font-weight: bold;
+        position: relative;
+        z-index: 2;
+        margin-bottom: 1rem;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .price-container {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        margin: 1.5rem 0;
+      }
+
+      .price {
+        font-size: 3.5rem;
+        font-weight: bold;
+        color: white;
+        position: relative;
+        z-index: 2;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        margin-left: 0.5rem;
+      }
+
+      .currency {
+        font-size: 1.5rem;
+        color: rgba(255, 255, 255, 0.8);
+        font-weight: 500;
+      }
+
+      .period {
+        display: block;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 1.1rem;
+        margin-top: 0.5rem;
+      }
+
+      .card-body {
+        padding: 2.5rem;
+        text-align: right;
+        position: relative;
+      }
+
+      .feature-list {
+        list-style: none;
+        margin-bottom: 2.5rem;
+      }
+
+      .feature-item {
+        padding: 0.9rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        transition: transform 0.3s;
+      }
+
+      .feature-item:hover {
+        transform: translateX(-5px);
+        color: white;
+      }
+
+      .feature-icon {
+        margin-left: 1rem;
+        color: #3b82f6;
+        font-size: 1.2rem;
+        transition: transform 0.3s;
+      }
+
+      .gold-icon {
+        color: #fbbf24;
+      }
+
+      .silver-icon {
+        color: #d1d5db;
+      }
+
+      .pricing-card:hover .feature-icon {
+        transform: scale(1.2);
+      }
+
+      .btn {
+        display: block;
+        padding: 1.2rem 2rem;
+        background: transparent;
+        color: white;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.4s ease;
+        border: 2px solid;
+        cursor: pointer;
+        font-size: 1.1rem;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        letter-spacing: 1px;
+      }
+
+      .btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        transition: width 0.4s ease;
+        z-index: -1;
+      }
+
+      .btn:hover::before {
+        width: 100%;
+      }
+
+      .btn-free {
+        border-color: #3b82f6;
+        color: #3b82f6;
+      }
+
+      .btn-free::before {
+        background: rgba(59, 130, 246, 0.1);
+      }
+
+      .btn-free:hover {
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+      }
+
+      .btn-silver {
+        border-color: #d1d5db;
+        color: #d1d5db;
+      }
+
+      .btn-silver::before {
+        background: rgba(209, 213, 219, 0.1);
+      }
+
+      .btn-silver:hover {
+        box-shadow: 0 0 20px rgba(209, 213, 219, 0.4);
+      }
+
+      .btn-gold {
+        border-color: #fbbf24;
+        color: #fbbf24;
+      }
+
+      .btn-gold::before {
+        background: rgba(251, 191, 36, 0.1);
+      }
+
+      .btn-gold:hover {
+        box-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
+      }
+
+      .popular-tag {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        color: white;
+        padding: 0.5rem 2rem;
+        transform: translateX(30%) translateY(0%) rotate(45deg);
+        transform-origin: top right;
+        font-size: 0.9rem;
+        font-weight: bold;
+        width: 200px;
+        text-align: center;
+        z-index: 3;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Animation elements */
+      .animation-circle {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0.2;
+        z-index: 1;
+        filter: blur(5px);
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-20px) rotate(180deg);
+        }
+        100% {
+          transform: translateY(0) rotate(360deg);
+        }
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          opacity: 0.2;
+        }
+        50% {
+          transform: scale(1.2);
+          opacity: 0.3;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 0.2;
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInRight {
+        from {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes fadeInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .card-shine {
+        position: absolute;
+        top: -100%;
+        left: -100%;
+        right: -100%;
+        bottom: -100%;
+        background: linear-gradient(
+          45deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.03) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        transform: rotateZ(60deg) translate(-50%, -50%);
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .contact-section {
+        margin-top: 6rem;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 12px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        color: #b8c2cc;
+        animation: fadeInUp 1s 1.4s forwards;
+        opacity: 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .contact-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+      }
+
+      .contact-link {
+        color: #3b82f6;
+        text-decoration: none;
+        transition: all 0.3s;
+        position: relative;
+        padding-bottom: 2px;
+      }
+
+      .contact-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: #3b82f6;
+        transition: width 0.3s;
+      }
+
+      .contact-link:hover {
+        color: #60a5fa;
+      }
+
+      .contact-link:hover::after {
+        width: 100%;
+      }
+
+      .features-highlight {
+        display: inline-block;
+        padding: 0.2rem 0.5rem;
+        margin-right: 0.3rem;
+        color: #3b82f6;
+        font-weight: 600;
+        border-radius: 2px;
+      }
+
+      .features-silver {
+        color: #d1d5db;
+      }
+
+      .features-gold {
+        color: #fbbf24;
+      }
+
+      /* Responsive styles */
+      @media (max-width: 768px) {
+        .pricing-container {
+          flex-direction: column;
+          align-items: center;
+        }
+        .pricing-card {
+          width: 100%;
+          max-width: 350px;
+          margin-bottom: 2rem;
+        }
+        h1 {
+          font-size: 2.2rem;
+        }
+        .subtitle {
+          font-size: 1.1rem;
+        }
+      }
+
+      /* Extra small devices */
+      @media (max-width: 480px) {
+        .pricing-card {
+          max-width: 320px;
+        }
+        .card-body {
+          padding: 1.5rem;
+        }
+        .plan-name {
+          font-size: 1.8rem;
+        }
+        .price {
+          font-size: 3rem;
+        }
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Particle background -->
+    <div class="particles" id="particles"></div>
+
+    <div class="container">
+      <h1>ابتكر فيديوهات تعليمية بالذكاء الاصطناعي</h1>
+      <p class="subtitle">
+        نقدم أحدث تقنيات الذكاء الاصطناعي لإنشاء فيديوهات تعليمية احترافية،
+        دورات برمجة متقدمة، ألعاب تفاعلية، أنشطة متنوعة، دعم المرشدين، ومحتوى
+        الواقع الافتراضي - كل ذلك بخطوات بسيطة وفعالة
+      </p>
+
+      <div class="pricing-container" id="pricing-container">
+        <!-- Free Plan -->
+        <div class="pricing-card" id="free-card">
+          <div class="card-shine"></div>
+          <div class="card-header free-header">
+            <div
+              class="animation-circle"
+              style="
+                width: 120px;
+                height: 120px;
+                background: rgba(59, 130, 246, 0.3);
+                top: -60px;
+                right: -60px;
+                animation: float 10s infinite ease-in-out;
+              "
+            ></div>
+            <div
+              class="animation-circle"
+              style="
+                width: 80px;
+                height: 80px;
+                background: rgba(59, 130, 246, 0.2);
+                bottom: -20px;
+                left: -20px;
+                animation: pulse 8s infinite ease-in-out;
+              "
+            ></div>
+            <h2 class="plan-name">الخطة المجانية</h2>
+            <div class="price-container">
+              <span class="price">٠</span>
+              <span class="currency">دولار</span>
+            </div>
+            <p class="period">شهرياً</p>
+          </div>
+          <div class="card-body">
+            <ul class="feature-list">
+              <li class="feature-item">
+                <i class="fas fa-check-circle feature-icon"></i>
+                <span class="features-highlight">١٠</span> فيديوهات أسبوعياً
+              </li>
+              <li class="feature-item">
+                <i class="fas fa-check-circle feature-icon"></i>
+                مدة الفيديو: <span class="features-highlight">دقيقة واحدة</span>
+              </li>
+              <li class="feature-item">
+                <i class="fas fa-check-circle feature-icon"></i>
+                دقة متوسطة <span class="features-highlight">٤٨٠ بكسل</span>
+              </li>
+              <li class="feature-item">
+                <i class="fas fa-check-circle feature-icon"></i>
+                <span class="features-highlight">٥</span> قوالب أساسية
+              </li>
+              <li class="feature-item">
+                <i class="fas fa-check-circle feature-icon"></i>
+                دعم عبر البريد الإلكتروني
+              </li>
+            </ul>
+            <button class="btn btn-free">ابدأ الآن مجاناً</button>
+          </div>
+        </div>
+
+        <!-- Silver Plan -->
+        <div class="pricing-card" id="silver-card">
+          <div class="popular-tag">الأكثر اختياراً</div>
+          <div class="card-shine"></div>
+          <div class="card-header silver-header">
+            <div
+              class="animation-circle"
+              style="
+                width: 140px;
+                height: 140px;
+                background: rgba(209, 213, 219, 0.3);
+                top: -70px;
+                right: -70px;
+                animation: float 12s infinite ease-in-out;
+              "
+            ></div>
+            <div
+              class="animation-circle"
+              style="
+                width: 90px;
+                height: 90px;
+                background: rgba(209, 213, 219, 0.2);
+                bottom: -30px;
+                left: -30px;
+                animation: pulse 9s infinite ease-in-out;
+              "
+            ></div>
+            <h2 class="plan-name">الخطة الفضية</h2>
+            <div class="price-container">
+              <span class="price">١٩</span>
+              <span class="currency">دولار</span>
+            </div>
+            <p class="period">شهرياً</p>
+          </div>
+          <div class="card-body">
+            <ul class="feature-list">
+              <li class="feature-item">
+                <i class="fas fa-check-circle feature-icon silver-icon"></i>
+                <span class="features-highlight features-silver">٥٠</span> فيديو
+                أسبوعياً
+              </li>
+              <li class="feature-item">
+                <i class="fas fa-check-circle feature-icon silver-icon"></i>
+                مدة الفيديو:
+                <span class="features-highlight features-silver">٣ دقائق</span>
+              </li>
+              <li class="feature-item">
+                <i class="fas fa-check-circle feature-icon silver-icon"></i>
+                دقة عالية
+                <span class="features-highlight features-silver">٧٢٠ بكسل</span>
+              </li>
+              <li class="feature-item">
+                <i class="fas fa-check-circle feature-icon silver-icon"></i>
+                <span class="features-highlight features-silver">١٥</span> قالب
+                متنوع
+              </li>
+              <li class="feature-item">
+                <i class="fas fa-check-circle feature-icon silver-icon"></i>
+                تخصيص العلامة التجارية
+              </li>
+              <li class="feature-item">
+                <i class="fas fa-check-circle feature-icon silver-icon"></i>
+                دعم عبر الدردشة الحية
+              </li>
+              <li class="feature-item">
+                <i class="fas fa-check-circle feature-icon silver-icon"></i>
+                تحليلات أساسية للمشاهدات
+              </li>
+              <li class="feature-item">
+                <i class="fas fa-check-circle feature-icon silver-icon"></i>
+                <span class="features-highlight features-silver"
+                  >دورات برمجة</span
+                >
+                متقدمة
+              </li>
+              <li class="feature-item">
+                <i class="fas fa-check-circle feature-icon silver-icon"></i>
+                <span class="features-highlight features-silver">١٠</span> ألعاب
+                وأنشطة تفاعلية
+              </li>
+              <li class="feature-item">
+                <i class="fas fa-check-circle feature-icon silver-icon"></i>
+                الوصول إلى
+                <span class="features-highlight features-silver">مرشد</span>
+                تعليمي
+              </li>
+            </ul>
+            <button class="btn btn-silver">اشترك الآن</button>
+          </div>
+        </div>
+
+        <!-- Gold Plan -->
+        <div class="pricing-card" id="gold-card">
+          <div class="card-shine"></div>
+          <div class="card-header gold-header">
+            <div
+              class="animation-circle"
+              style="
+                width: 160px;
+                height: 160px;
+                background: rgba(251, 191, 36, 0.3);
+                top: -80px;
+                right: -80px;
+                animation: float 14s infinite ease-in-out;
+              "
+            ></div>
+            <div
+              class="animation-circle"
+              style="
+                width: 100px;
+                height: 100px;
+                background: rgba(251, 191, 36, 0.2);
+                bottom: -40px;
+                left: -40px;
+                animation: pulse 10s infinite ease-in-out;
+              "
+            ></div>
+            <h2 class="plan-name">الخطة الذهبية</h2>
+            <div class="price-container">
+              <span class="price">٤٩</span>
+              <span class="currency">دولار</span>
+            </div>
+            <p class="period">شهرياً</p>
+          </div>
+          <div class="card-body">
+            <ul class="feature-list">
+              <li class="feature-item">
+                <i class="fas fa-check-circle feature-icon gold-icon"></i>
+                فيديوهات
+                <span class="features-highlight features-gold">غير محدودة</span>
+              </li>
+              <li class="feature-item">
+                <i class="fas fa-check-circle feature-icon gold-icon"></i>
+                مدة الفيديو:
+                <span class="features-highlight features-gold">١٠ دقائق</span>
+              </li>
+              <li class="feature-item">
+                <i class="fas fa-check-circle feature-icon gold-icon"></i>
+                دقة فائقة
+                <span class="features-highlight features-gold">١٠٨٠ بكسل</span>
+              </li>
+              <li class="feature-item">
+                <i class="fas fa-check-circle feature-icon gold-icon"></i>
+                <span class="features-highlight features-gold">جميع</span>
+                القوالب المتميزة
+              </li>
+              <li class="feature-item">
+                <i class="fas fa-check-circle feature-icon gold-icon"></i>
+                تخصيص كامل للعلامة التجارية
+              </li>
+              <li class="feature-item">
+                <i class="fas fa-check-circle feature-icon gold-icon"></i>
+                دعم أولوية على
+                <span class="features-highlight features-gold"
+                  >مدار الساعة</span
+                >
+              </li>
+              <li class="feature-item">
+                <i class="fas fa-check-circle feature-icon gold-icon"></i>
+                تصدير بصيغ متعددة
+              </li>
+              <li class="feature-item">
+                <i class="fas fa-check-circle feature-icon gold-icon"></i>
+                تحليلات متقدمة مع تقارير أسبوعية
+              </li>
+              <li class="feature-item">
+                <i class="fas fa-check-circle feature-icon gold-icon"></i>
+                خاصية ترجمة آلية لـ
+                <span class="features-highlight features-gold">٥</span> لغات
+              </li>
+              <li class="feature-item">
+                <i class="fas fa-check-circle feature-icon gold-icon"></i>
+                <span class="features-highlight features-gold">جميع</span> دورات
+                البرمجة المتقدمة
+              </li>
+              <li class="feature-item">
+                <i class="fas fa-check-circle feature-icon gold-icon"></i>
+                <span class="features-highlight features-gold"
+                  >مكتبة كاملة</span
+                >
+                من الألعاب والأنشطة
+              </li>
+              <li class="feature-item">
+                <i class="fas fa-check-circle feature-icon gold-icon"></i>
+                <span class="features-highlight features-gold">مرشدين</span>
+                متخصصين على مدار الأسبوع
+              </li>
+              <li class="feature-item">
+                <i class="fas fa-check-circle feature-icon gold-icon"></i>
+                محتوى
+                <span class="features-highlight features-gold"
+                  >الواقع الافتراضي</span
+                >
+                الحصري
+              </li>
+            </ul>
+            <button class="btn btn-gold">احصل على القوة الكاملة</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-section">
+        <p style="font-size: 1.2rem; margin-bottom: 1rem">
+          هل تحتاج المساعدة في اختيار الخطة المناسبة؟
+        </p>
+        <p style="line-height: 1.8">
+          تواصل مع فريق <a href="#" class="contact-link">الدعم الفني</a> أو تحقق
+          من <a href="#" class="contact-link">الأسئلة الشائعة</a> | جرّب نسختنا
+          المجانية <a href="#" class="contact-link">الآن</a>
+        </p>
+      </div>
+    </div>
+
+    <script>
+      // Create particles for the background
+      document.addEventListener("DOMContentLoaded", function () {
+        const particlesContainer = document.getElementById("particles");
+        const particleCount = 50;
+
+        for (let i = 0; i < particleCount; i++) {
+          const particle = document.createElement("div");
+          particle.classList.add("particle");
+
+          // Random position, size and delay
+          const size = Math.random() * 6 + 2;
+          particle.style.width = `${size}px`;
+          particle.style.height = `${size}px`;
+          particle.style.left = `${Math.random() * 100}%`;
+          particle.style.top = `${Math.random() * 100}%`;
+          particle.style.opacity = Math.random() * 0.5;
+          particle.style.animationDuration = `${Math.random() * 20 + 10}s`;
+          particle.style.animationDelay = `${Math.random() * 5}s`;
+
+          particlesContainer.appendChild(particle);
+        }
+
+        // Animation for pricing cards
+        const freeCard = document.getElementById("free-card");
+        const silverCard = document.getElementById("silver-card");
+        const goldCard = document.getElementById("gold-card");
+
+        // Staggered animation for cards
+        setTimeout(() => {
+          freeCard.style.animation = "fadeInRight 0.8s forwards";
+        }, 300);
+
+        setTimeout(() => {
+          silverCard.style.animation = "fadeInUp 0.8s forwards";
+        }, 500);
+
+        setTimeout(() => {
+          goldCard.style.animation = "fadeInLeft 0.8s forwards";
+        }, 700);
+
+        // 3D card effect
+        const cards = document.querySelectorAll(".pricing-card");
+
+        cards.forEach((card) => {
+          card.addEventListener("mousemove", function (e) {
+            const rect = this.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const midCardWidth = rect.width / 2;
+            const midCardHeight = rect.height / 2;
+
+            const angleY = -(x - midCardWidth) * 0.01;
+            const angleX = (y - midCardHeight) * 0.01;
+
+            this.style.transform = `rotateY(${angleY}deg) rotateX(${angleX}deg) translateY(-15px)`;
+          });
+
+          card.addEventListener("mouseleave", function () {
+            this.style.transform = "rotateY(0) rotateX(0) translateY(0)";
+          });
+        });
+
+        // Button click effect
+        const buttons = document.querySelectorAll(".btn");
+        buttons.forEach((button) => {
+          button.addEventListener("click", function () {
+            this.style.transform = "scale(0.95)";
+            setTimeout(() => {
+              this.style.transform = "scale(1)";
+            }, 200);
+          });
+        });
+
+        // Highlight feature on hover
+        // Highlight feature on hover
+        const features = document.querySelectorAll(".feature-item");
+        features.forEach((feature) => {
+          feature.addEventListener("mouseenter", function () {
+            const icon = this.querySelector(".feature-icon");
+            icon.style.transform = "scale(1.2) rotate(10deg)";
+            this.style.transform = "translateX(-10px)";
+            this.style.color = "white";
+          });
+
+          feature.addEventListener("mouseleave", function () {
+            const icon = this.querySelector(".feature-icon");
+            icon.style.transform = "scale(1)";
+            this.style.transform = "translateX(0)";
+            this.style.color = "rgba(255, 255, 255, 0.8)";
+          });
+        });
+
+        // Shine effect for cards
+        const pricingCards = document.querySelectorAll(".pricing-card");
+        pricingCards.forEach((card) => {
+          const shine = card.querySelector(".card-shine");
+
+          card.addEventListener("mousemove", function (e) {
+            const rect = this.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            shine.style.transform = `rotateZ(60deg) translate(${x}px, ${y}px)`;
+          });
+
+          card.addEventListener("mouseleave", function () {
+            shine.style.transform = "rotateZ(60deg) translate(-50%, -50%)";
+          });
+        });
+
+        // Intersection Observer for animations on scroll
+        const observeElements = document.querySelectorAll(
+          ".pricing-card, .subtitle, .contact-section"
+        );
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = "1";
+              entry.target.style.transform = "translateY(0)";
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        observeElements.forEach((element) => {
+          observer.observe(element);
+        });
+
+        // Simple accordion for mobile view (responsive enhancement)
+        const mediaQuery = window.matchMedia("(max-width: 768px)");
+        if (mediaQuery.matches) {
+          const cardHeaders = document.querySelectorAll(".card-header");
+
+          cardHeaders.forEach((header) => {
+            header.addEventListener("click", function () {
+              const body = this.nextElementSibling;
+              const isExpanded = body.style.maxHeight;
+
+              // Reset all other card bodies
+              document.querySelectorAll(".card-body").forEach((item) => {
+                item.style.maxHeight = null;
+              });
+
+              if (!isExpanded) {
+                body.style.maxHeight = body.scrollHeight + "px";
+              }
+            });
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
