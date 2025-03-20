@@ -1,0 +1,170 @@
+/* Enhanced styles for community categories page */
+body {
+  font-family: "Tajawal", sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  min-height: 100vh;
+  padding: 40px 0;
+  background: linear-gradient(135deg, #75a4eb 0%, #21365e 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-areas:
+    "W C"
+    "F D";
+  grid-gap: 25px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  color: white;
+  text-decoration: none;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(0);
+  transition: transform 0.5s ease;
+  border-radius: 50%;
+}
+
+.card:hover::before {
+  transform: scale(2);
+}
+
+.card::after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  opacity: 0.2;
+  font-size: 100px;
+  bottom: -20px;
+  left: -20px;
+  color: rgba(0, 0, 0, 0.267);
+}
+
+.math {
+  grid-area: W;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(220, 100, 150),
+    rgb(130, 10, 80)
+  );
+}
+
+.math::after {
+  content: "\f1ec"; /* Calculator icon */
+}
+
+.programming {
+  grid-area: C;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(100, 138, 243),
+    rgb(0, 11, 131)
+  );
+}
+
+.programming::after {
+  content: "\f121"; /* Code icon */
+}
+
+.language {
+  grid-area: F;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(59, 215, 111),
+    rgb(25, 114, 0)
+  );
+}
+
+.language::after {
+  content: "\f1ab"; /* Language icon */
+}
+
+.science {
+  grid-area: D;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(254, 188, 88),
+    rgb(176, 113, 4)
+  );
+}
+
+.science::after {
+  content: "\f06e"; /* Flask icon */
+}
+
+/* Make text more readable on colored backgrounds */
+.card {
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgb(0, 0, 0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    grid-template-areas:
+      "W"
+      "C"
+      "F"
+      "D";
+    grid-template-columns: 1fr;
+  }
+}
+
+/* RTL specific styling */
+html[dir="rtl"] .container {
+  direction: rtl;
+}
+
+/* Add pulsing effect to cards */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.card:hover {
+  animation: pulse 2s infinite;
+}

@@ -1,0 +1,127 @@
+{
+  "quiz": {
+    "topic": "Education in Egypt and the Middle East",
+    "questions": [
+      {
+        "id": 1,
+        "question": "What is the key focus of Egypt's Vision 2030 in relation to education?",
+        "options": [
+          {
+            "letter": "A",
+            "text": "Increasing access to higher education"
+          },
+          {
+            "letter": "B",
+            "text": "Aligning the education system with sustainable development goals"
+          },
+          {
+            "letter": "C",
+            "text": "Privatizing public schools"
+          },
+          {
+            "letter": "D",
+            "text": "Eliminating free education"
+          }
+        ],
+        "correctAnswer": "B",
+        "explanation": "The key focus of Egypt's Vision 2030 in relation to education is aligning the education system with sustainable development goals."
+      },
+      {
+        "id": 2,
+        "question": "Which of the following is a major challenge in Egypt's education system?",
+        "options": [
+          {
+            "letter": "A",
+            "text": "Over-enrollment in rural areas"
+          },
+          {
+            "letter": "B",
+            "text": "Lack of gender disparity in schools"
+          },
+          {
+            "letter": "C",
+            "text": "Unequal access to education in rural versus urban areas"
+          },
+          {
+            "letter": "D",
+            "text": "High literacy rates"
+          }
+        ],
+        "correctAnswer": "C",
+        "explanation": "A major challenge in Egypt's education system is unequal access to education in rural versus urban areas."
+      },
+      {
+        "id": 3,
+        "question": "How is Egypt working to improve the quality of education in alignment with SDG 4?",
+        "options": [
+          {
+            "letter": "A",
+            "text": "By closing rural schools"
+          },
+          {
+            "letter": "B",
+            "text": "By increasing the use of technology and digital tools in classrooms"
+          },
+          {
+            "letter": "C",
+            "text": "By limiting access to higher education"
+          },
+          {
+            "letter": "D",
+            "text": "By increasing tuition fees for public schools"
+          }
+        ],
+        "correctAnswer": "B",
+        "explanation": "Egypt is working to improve the quality of education in alignment with SDG 4 by increasing the use of technology and digital tools in classrooms."
+      },
+      {
+        "id": 4,
+        "question": "What is one key challenge faced by girls in rural areas of the Middle East when it comes to accessing education?",
+        "options": [
+          {
+            "letter": "A",
+            "text": "Language barriers"
+          },
+          {
+            "letter": "B",
+            "text": "Lack of infrastructure"
+          },
+          {
+            "letter": "C",
+            "text": "Cultural norms that prioritize boys' education"
+          },
+          {
+            "letter": "D",
+            "text": "Overcrowded schools"
+          }
+        ],
+        "correctAnswer": "C",
+        "explanation": "One key challenge faced by girls in rural areas of the Middle East when it comes to accessing education is cultural norms that prioritize boys' education."
+      },
+      {
+        "id": 5,
+        "question": "Which Middle Eastern country has made significant progress in improving girls' access to education?",
+        "options": [
+          {
+            "letter": "A",
+            "text": "Yemen"
+          },
+          {
+            "letter": "B",
+            "text": "Lebanon"
+          },
+          {
+            "letter": "C",
+            "text": "Syria"
+          },
+          {
+            "letter": "D",
+            "text": "Afghanistan"
+          }
+        ],
+        "correctAnswer": "B",
+        "explanation": "Lebanon has made significant progress in improving girls' access to education in the Middle East."
+      }
+    ]
+  }
+}

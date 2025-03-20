@@ -1,0 +1,127 @@
+{
+  "quiz": {
+    "topic": "SDG 4: Quality Education",
+    "questions": [
+      {
+        "id": 1,
+        "question": "What is the main objective of SDG 4?",
+        "options": [
+          {
+            "letter": "A",
+            "text": "To promote economic growth globally"
+          },
+          {
+            "letter": "B",
+            "text": "To ensure inclusive and equitable quality education for all"
+          },
+          {
+            "letter": "C",
+            "text": "To reduce global inequality"
+          },
+          {
+            "letter": "D",
+            "text": "To improve healthcare access for all"
+          }
+        ],
+        "correctAnswer": "B",
+        "explanation": "The main objective of SDG 4 is to ensure inclusive and equitable quality education for all."
+      },
+      {
+        "id": 2,
+        "question": "Which of the following is a major barrier to achieving quality education in developing countries?",
+        "options": [
+          {
+            "letter": "A",
+            "text": "Urbanization"
+          },
+          {
+            "letter": "B",
+            "text": "High literacy rates"
+          },
+          {
+            "letter": "C",
+            "text": "Gender inequality"
+          },
+          {
+            "letter": "D",
+            "text": "Population growth"
+          }
+        ],
+        "correctAnswer": "C",
+        "explanation": "Gender inequality is a major barrier to achieving quality education in developing countries."
+      },
+      {
+        "id": 3,
+        "question": "What global statistic is used to measure access to education?",
+        "options": [
+          {
+            "letter": "A",
+            "text": "Poverty rate"
+          },
+          {
+            "letter": "B",
+            "text": "Literacy rate"
+          },
+          {
+            "letter": "C",
+            "text": "Employment rate"
+          },
+          {
+            "letter": "D",
+            "text": "Birth rate"
+          }
+        ],
+        "correctAnswer": "B",
+        "explanation": "The literacy rate is a global statistic used to measure access to education."
+      },
+      {
+        "id": 4,
+        "question": "Which region faces the highest levels of educational disparity due to conflict and poverty?",
+        "options": [
+          {
+            "letter": "A",
+            "text": "North America"
+          },
+          {
+            "letter": "B",
+            "text": "Europe"
+          },
+          {
+            "letter": "C",
+            "text": "Sub-Saharan Africa"
+          },
+          {
+            "letter": "D",
+            "text": "East Asia"
+          }
+        ],
+        "correctAnswer": "C",
+        "explanation": "Sub-Saharan Africa faces the highest levels of educational disparity due to conflict and poverty."
+      },
+      {
+        "id": 5,
+        "question": "Which SDG is most closely related to the achievement of SDG 4?",
+        "options": [
+          {
+            "letter": "A",
+            "text": "SDG 3 (Good Health and Well-being)"
+          },
+          {
+            "letter": "B",
+            "text": "SDG 6 (Clean Water and Sanitation)"
+          },
+          {
+            "letter": "C",
+            "text": "SDG 8 (Decent Work and Economic Growth)"
+          },
+          {
+            "letter": "D",
+            "text": "All of the above"
+          }
+        ],
+        "correctAnswer": "D",
+        "explanation": "All of the mentioned SDGs (3, 6, and 8) are closely related to the achievement of SDG 4."
+      }
+    ]
+  }
+}

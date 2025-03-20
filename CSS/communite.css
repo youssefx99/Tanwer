@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&family=Vazirmatn:wght@100..900&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Vazirmatn", sans-serif;
+}
+
+body {
+  background-image: url("../SDG_header_wheel.jpg");
+  background-size: cover;
+}
+
+.communiteContainerAll {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.psotsControl {
+  /* border: 1px solid black; */
+  width: 220px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.createPostBtn {
+  font-size: 1.2em;
+  padding: 15px 25px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.createPostBtn:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 123, 255, 0.5);
+}
+
+.createPostBtn:focus {
+  outline: none;
+}
+
+.h1name {
+  font-weight: bolder;
+  font-size: 3em;
+  color: #ffffff; /* White text */
+  text-align: center;
+  margin-bottom: 40px;
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.7), /* Primary shadow for depth */
+    4px 4px 6px rgba(0, 0, 0, 0.5), /* Secondary shadow for more contrast */
+    6px 6px 8px rgba(0, 0, 0, 0.3); /* Tertiary shadow for subtle glow */
+}
+.thePost {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 25px;
+  margin: 15px 0;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.thePost:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.postTitle {
+  text-align: right;
+  font-size: 1.8em;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.postMaker {
+  text-align: right;
+  font-size: 1em;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.postContent {
+  text-align: right;
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+.postComments {
+  text-align: right;
+  padding: 15px;
+  background-color: rgba(245, 245, 245, 0.9);
+  border-radius: 15px;
+  margin-top: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.theComment {
+  text-align: right;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.commentMaker {
+  text-align: right; 
+  font-size: 1em;
+  font-weight: 500;
+  color: #333;
+}
+
+.commmentContent {
+  text-align: right;
+  font-size: 1em;
+  margin-top: 5px;
+}
+
+.newPost {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.commentInputField {
+  width: 85%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.commentInputField:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+}
+
+.newCommentBtn {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+}
+
+.newCommentBtn:hover {
+  background-color: #218838;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+}
+
+.createNewPostPlace {
+  background-color: rgba(0, 123, 255, 0.9);
+    direction: rtl !important;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: flex-start; /* Align items to the start (left) */
+  margin-top: 15px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.2);
+}
+
+.titlePostValue,
+.questionPostValue {
+  width: 100%; /* Full width */
+  margin-bottom: 20px; /* Add space between input fields */
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.sendPostBtn button {
+  padding: 12px 30px;
+  background-color: #ffcc00;
+  border: none;
+  color: #333;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sendPostBtn button:hover {
+  background-color: #ffbb00;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 204, 0, 0.4);
+}

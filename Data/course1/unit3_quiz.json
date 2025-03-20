@@ -1,0 +1,127 @@
+{
+  "quiz": {
+    "topic": "Inclusive Education",
+    "questions": [
+      {
+        "id": 1,
+        "question": "What is the primary focus of inclusive education?",
+        "options": [
+          {
+            "letter": "A",
+            "text": "Reducing the cost of education"
+          },
+          {
+            "letter": "B",
+            "text": "Ensuring that all children, regardless of background, have access to quality education"
+          },
+          {
+            "letter": "C",
+            "text": "Teaching only advanced students"
+          },
+          {
+            "letter": "D",
+            "text": "Limiting education to urban areas"
+          }
+        ],
+        "correctAnswer": "B",
+        "explanation": "The primary focus of inclusive education is ensuring that all children, regardless of background, have access to quality education."
+      },
+      {
+        "id": 2,
+        "question": "Which group is most likely to face barriers to accessing education?",
+        "options": [
+          {
+            "letter": "A",
+            "text": "Urban youth"
+          },
+          {
+            "letter": "B",
+            "text": "Girls in rural areas"
+          },
+          {
+            "letter": "C",
+            "text": "Boys in cities"
+          },
+          {
+            "letter": "D",
+            "text": "Adults over 40"
+          }
+        ],
+        "correctAnswer": "B",
+        "explanation": "Girls in rural areas are most likely to face barriers to accessing education."
+      },
+      {
+        "id": 3,
+        "question": "What is a key policy approach to promoting inclusive education for students with disabilities?",
+        "options": [
+          {
+            "letter": "A",
+            "text": "Segregating students with disabilities"
+          },
+          {
+            "letter": "B",
+            "text": "Providing special education teachers and resources in mainstream schools"
+          },
+          {
+            "letter": "C",
+            "text": "Limiting their access to formal education"
+          },
+          {
+            "letter": "D",
+            "text": "Placing all students in separate schools"
+          }
+        ],
+        "correctAnswer": "B",
+        "explanation": "A key policy approach to promoting inclusive education for students with disabilities is providing special education teachers and resources in mainstream schools."
+      },
+      {
+        "id": 4,
+        "question": "Which of the following can help improve access to education for refugees?",
+        "options": [
+          {
+            "letter": "A",
+            "text": "Reducing the number of schools available"
+          },
+          {
+            "letter": "B",
+            "text": "Offering education programs in refugee camps"
+          },
+          {
+            "letter": "C",
+            "text": "Excluding them from local education systems"
+          },
+          {
+            "letter": "D",
+            "text": "Limiting their access to basic education"
+          }
+        ],
+        "correctAnswer": "B",
+        "explanation": "Offering education programs in refugee camps can help improve access to education for refugees."
+      },
+      {
+        "id": 5,
+        "question": "Which international organization works extensively on promoting inclusive education globally?",
+        "options": [
+          {
+            "letter": "A",
+            "text": "United Nations Educational, Scientific and Cultural Organization (UNESCO)"
+          },
+          {
+            "letter": "B",
+            "text": "World Health Organization (WHO)"
+          },
+          {
+            "letter": "C",
+            "text": "International Monetary Fund (IMF)"
+          },
+          {
+            "letter": "D",
+            "text": "Greenpeace"
+          }
+        ],
+        "correctAnswer": "A",
+        "explanation": "The United Nations Educational, Scientific and Cultural Organization (UNESCO) works extensively on promoting inclusive education globally."
+      }
+    ]
+  }
+}

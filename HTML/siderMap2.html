@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NUmber2</title>
+    <link rel="stylesheet" href="../CSS/sliderMap2.css" />
+    <link
+      rel="stylesheet"
+      href="../bootStrap/cdn.jsdelivr.net_npm_bootstrap@4.0.0_dist_css_bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../bootStrap/cdnjs.cloudflare.com_ajax_libs_font-awesome_5.15.4_css_all.min.css"
+    />
+  <body>
+       <nav class="navbar navbar-expand-lg navbar-light bg-light"></nav>
+
+    <div class="container">
+      <!-- Left section: Slider and Images -->
+      <div class="leftSection">
+        <div id="imageContainer">
+          <img
+            id="currentImage"
+            src="./images/MOD10C1MSNOW200003.jpeg"
+            alt="Snow cover image for March 2000"
+            style="opacity: 0"
+          />
+        </div>
+        <input type="range" id="slider" min="0" max="286" value="0" />
+        <div id="dateDisplay"></div>
+      </div>
+
+      <!-- Right section: Title and Description -->
+      <div class="rightSection">
+        <h1>fresh water for plants and animals (2000 - 2024)</h1>
+        <p>
+          Globally, rain is the main source of fresh water for plants and
+          animals rainfall is essential for life across Earth’s landscapes. In
+          addition to moving tremendous amounts of water through Earth’s
+          atmosphere, rain clouds also move tremendous amounts of energy. When
+          water evaporates from the surface and rises as vapor into the
+          atmosphere, it carries heat from the sun-warmed surface with it.
+          Later, when the water vapor condenses to form cloud droplets and rain,
+          the heat is released into the atmosphere. This heating is a major part
+          of Earth's energy budget and climate. The rainfall maps show total
+          monthly rainfall in millimeters from NASA’s Integrated Multi-satellitE
+          Retrievals for GPM (IMERG) dataset. High rain totals are represented
+          in dark blue.
+        </p>
+
+                <div id="rightArrow" class="arrow">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+    </div>
+
+    <script src="../Data/myjscode.js"></script>
+    <script
+      src="https://kit.fontawesome.com/9bec9fd168.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../bootStrap/all.min.js" />
+    <link rel="stylesheet" href="../bootStrap/bootstrap.bundle.min.js" />
+    <link rel="stylesheet" href="../bootStrap/bootstrap.bundle.min.js.map" />
+    <!-- <script src="../js/navbar.js" type="module"></script> -->
+    <script src="../js/sliderMap2.js"></script>
+    <script src="../js/main.js" type="module"></script>
+
+        <!-- JS to handle arrow click -->
+    <script>
+      document
+        .getElementById("rightArrow")
+        .addEventListener("click", function () {
+          window.location.href = "./interactives maps.html";
+        });
+    </script>
+  </body>
+</html>

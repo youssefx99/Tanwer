@@ -1,0 +1,9 @@
+file 'C:/Users/youss/Desktop/Hackthon/salam/output/images/image_2025-03-20T03-30-18-965Z_1.png'
+duration 3.27182825
+file 'C:/Users/youss/Desktop/Hackthon/salam/output/images/image_2025-03-20T03-30-18-965Z_2.png'
+duration 3.27182825
+file 'C:/Users/youss/Desktop/Hackthon/salam/output/images/image_2025-03-20T03-30-18-965Z_3.png'
+duration 3.27182825
+file 'C:/Users/youss/Desktop/Hackthon/salam/output/images/image_2025-03-20T03-30-18-965Z_4.png'
+duration 3.27182825
+file 'C:/Users/youss/Desktop/Hackthon/salam/output/images/image_2025-03-20T03-30-18-965Z_4.png'

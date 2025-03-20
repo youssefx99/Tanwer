@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
+
+* {
+    font-family: "Vazirmatn", sans-serif;
+}
+* h1 {
+    font-size: 40px;
+    color: #333;
+    margin: 10px 0;
+}
+* p {
+    font-size: 20px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.container{
+    background-image: url('/SDG_hero_image_v36.png');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    border-radius: 15px;
+    border-color: #333;
+    width: 500px;
+    height: 500px;
+}
+.popup .close-btn {
+    padding: 5px 10px;
+    background-color:black;
+    border-radius: 15px;
+    border-color: black;
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: white;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+.popup .close-btn:hover {
+    background:red;
+    transition: 0.3s;
+    transform: scale(1.2);
+}
+#flag {
+    background-color: aquamarine;
+    object-fit: fill;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+
+
+}
+
+.container .row {
+    background-blend-mode: luminosity;
+    width: 300px;
+    height: 500px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.container .row img{
+    width: 100%;
+    height: 300px;
+    border-radius: 10px 10px 0 0;
+}
+
+.container .row h2{
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.container .row p{
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.container .row a{
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.container .row a:hover{
+    background-color: #666;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    height: 500px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+
+}
+.col {
+    background-color: silver;
+    align-content: center;
+    width: 250px;
+    height: 240px;
+    margin: 10px;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.col:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+
+  .tooltip {
+    position: fixed;
+    background: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-family: Arial;
+    display: none;
+    pointer-events: none;
+}

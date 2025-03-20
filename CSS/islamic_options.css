@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&family=Vazirmatn:wght@100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Vazirmatn", sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/islamic-background.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero-content {
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+
+/* Main Container */
+.main-container {
+  padding: 60px 0;
+}
+
+.subject-title {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+.subject-title h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+.title-underline {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #45b649, #009f67);
+  margin: 15px auto 0;
+}
+
+/* Options Container */
+.options-container, .additional-subjects {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.option-card {
+  width: 350px;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.option-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon-wrapper {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 60px;
+  color: white;
+  font-size: 2rem;
+}
+
+.card-content {
+  padding: 50px 25px 25px;
+  text-align: center;
+}
+
+.card-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.btn-explore {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-explore i {
+  margin-right: 5px;
+  transition: transform 0.3s ease;
+}
+
+.btn-explore:hover i {
+  transform: translateX(-5px);
+}
+
+/* Subject-specific styling */
+.quran .card-icon-wrapper {
+  background: linear-gradient(135deg, #1e9600, #fff200);
+}
+
+.quran .card-icon {
+  background: #1e9600;
+}
+
+.quran .btn-explore {
+  background: #1e9600;
+}
+
+.seerah .card-icon-wrapper {
+  background: linear-gradient(135deg, #603813, #b29f94);
+}
+
+.seerah .card-icon {
+  background: #603813;
+}
+
+.seerah .btn-explore {
+  background: #603813;
+}
+
+.fiqh .card-icon-wrapper {
+  background: linear-gradient(135deg, #00416a, #87ceeb);
+}
+
+.fiqh .card-icon {
+  background: #00416a;
+}
+
+.fiqh .btn-explore {
+  background: #00416a;
+}
+
+.aqeedah .card-icon-wrapper {
+  background: linear-gradient(135deg, #334d50, #cbcaa5);
+}
+
+.aqeedah .card-icon {
+  background: #334d50;
+}
+
+.aqeedah .btn-explore {
+  background: #334d50;
+}
+
+.hadith .card-icon-wrapper {
+  background: linear-gradient(135deg, #5f2c82, #49a09d);
+}
+
+.hadith .card-icon {
+  background: #5f2c82;
+}
+
+.hadith .btn-explore {
+  background: #5f2c82;
+}
+
+/* Quote Section */
+.quote-section {
+  background-color: #009f67;
+  padding: 60px 0;
+  text-align: center;
+  color: white;
+}
+
+.quote-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quote-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+blockquote p {
+  font-size: 2.5rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+blockquote cite {
+  font-size: 1.2rem;
+  font-style: normal;
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+  
+  .subject-title h2 {
+    font-size: 2rem;
+  }
+  
+  .option-card {
+    width: 100%;
+    max-width: 350px;
+  }
+  
+  blockquote p {
+    font-size: 1.8rem;
+  }
+}
+
+/* Custom design elements for Islamic theme */
+.option-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: inherit;
+  opacity: 0.5;
+}
+
+.card-icon-wrapper::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 15px;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.2);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}

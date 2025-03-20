@@ -1,0 +1,28 @@
+{
+    "categories": [
+      {
+        "id": "math",
+        "name": "الرياضيات",
+        "icon": "fas fa-calculator",
+        "description": "أسئلة متعلقة بالرياضيات والإحصاء والجبر والهندسة"
+      },
+      {
+        "id": "programming",
+        "name": "البرمجة",
+        "icon": "fas fa-code",
+        "description": "أسئلة متعلقة بلغات البرمجة وتطوير البرمجيات وعلوم الحاسوب"
+      },
+      {
+        "id": "language",
+        "name": "اللغات",
+        "icon": "fas fa-language",
+        "description": "أسئلة متعلقة باللغات المختلفة مثل العربية والإنجليزية وغيرها"
+      },
+      {
+        "id": "science",
+        "name": "العلوم",
+        "icon": "fas fa-flask",
+        "description": "أسئلة متعلقة بالعلوم الطبيعية مثل الفيزياء والكيمياء والأحياء"
+      }
+    ]
+  }

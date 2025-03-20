@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
+
+* {
+    font-family: "Vazirmatn", sans-serif;
+}
+
+.body {
+    background-image:url ('Assets/background1.svg');
+    font-family: "Vazirmatn", sans-serif;  
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Start Page Styles - Scoped under .startPage */
+
+
+/* General Styles */
+.startPage {
+    font-family: 'Vazirmatn', sans-serif;
+    text-align: center;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+/* Centered and enlarged title */
+.startPage h2 {
+   margin-right: 100px;
+    font-size: 36px; /* Bigger title */
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: right;
+    position: relative;
+}
+
+/* Navigation Arrows */
+.startPage .navigation {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Inverted arrow styles */
+.startPage .prev,
+.startPage .next {
+    border: none;
+    background-color: grey; /* Purple */
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+.startPage .prev
+{
+    background-color: rgb(53, 140, 233); /* Purple */
+
+
+}
+
+/* Flip the arrows */
+.startPage .prev {
+   
+}
+.startPage .next {
+    transform: rotate(0deg);
+}
+
+/* Hover effect */
+.startPage .prev:hover,
+.startPage .next:hover {
+    background-color: #51a0f5;
+    transform: scale(1.15);
+}
+
+/* Categories container */
+.startPage .categories {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* Category card */
+.startPage .category {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect */
+.startPage .category:hover {
+    transform: scale(1.05);
+}
+
+/* Category image */
+.startPage .category img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Gradient blur effect above the button */
+.startPage .overlay {
+    position: absolute;
+    bottom: 35px; /* Places the blur above the button */
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to top, rgba(106, 13, 173, 0.4), transparent);
+    filter: blur(10px); /* Soft blur effect */
+    border-radius: 20px;
+    z-index: 1;
+}
+
+/* Button-like text box (fully visible and slightly smaller) */
+.startPage .text {
+    position: absolute;
+    bottom: -15px; /* Moves slightly outside */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #6a0dad; /* Purple */
+    color: white;
+    font-weight: bold;
+    font-size: 13px; /* Smaller text */
+    text-align: center;
+    padding: 6px 10px; /* Smaller padding */
+    border-radius: 25px;
+    width: 55%; /* Smaller button */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds depth */
+    z-index: 2; /* Ensures visibility */
+}
+
+/* Make sure the text is readable */
+.startPage .text h3 {
+    margin: 0;
+    font-size: 13px;
+}
+
+.startPage .text p {
+    margin: 2px 0 0;
+    font-size: 11px;
+    opacity: 0.9;
+}
+
+/* Fix overflow issue so the button is fully visible */
+.startPage .category-container {
+    position: relative;
+    padding-bottom: 25px; /* Adds space below for the button */
+}
+
+

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مهارات الاتصال</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+        
+        :root {
+            --primary-color: #1e88e5;
+            --secondary-color: #5e35b1;
+            --accent-color: #43a047;
+            --light-bg: #f5f9ff;
+            --dark-bg: #2c3e50;
+            --text-color: #333;
+            --light-text: #fff;
+        }
+        
+        body {
+            font-family: 'Tajawal', Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            max-width: 900px;
+            width: 90%;
+            margin: 40px auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: var(--light-text);
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+        }
+        
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: white;
+            clip-path: polygon(0 0, 100% 0, 50% 100%);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .intro {
+            padding: 20px 30px 0;
+            text-align: center;
+            color: var(--text-color);
+        }
+        
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 30px;
+        }
+        
+        .option {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--light-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .option:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .option-header {
+            padding: 15px 20px;
+            color: var(--light-text);
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.4rem;
+        }
+        
+        .lang-header {
+            background: linear-gradient(45deg, var(--primary-color), #64b5f6);
+        }
+        
+        .soft-header {
+            background: linear-gradient(45deg, var(--secondary-color), #9575cd);
+        }
+        
+        .option-content {
+            padding: 20px;
+        }
+        
+        .skill-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .skill-item {
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            transition: all 0.2s;
+        }
+        
+        .skill-item:hover {
+            background-color: rgba(30, 136, 229, 0.1);
+            transform: translateX(-5px);
+        }
+        
+        .skill-item::before {
+            content: "✓";
+            margin-left: 10px;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+        
+        .option-link {
+            display: block;
+            padding: 12px 0;
+            background-color: white;
+            color: var(--primary-color);
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-top: 1px solid #eee;
+            transition: all 0.2s;
+        }
+        
+        .option-link:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .option-wrapper {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-color);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .options {
+                flex-direction: column;
+            }
+            .option {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>مهارات الاتصال</h1>
+        </header>
+        <div class ="popup">
+        </div>
+        
+        <div class="intro">
+            <p>اكتشف المهارات الأساسية للتواصل الفعال في العالم المعاصر</p>
+        </div>
+        
+        <div class="options">
+            <!-- خيار مهارات اللغة -->
+            <a href="language-skills.html" class="option-wrapper">
+                <div class="option">
+                    <div class="option-header lang-header">مهارات اللغة</div>
+                    <div class="option-content">
+                        <ul class="skill-list">
+                            <li class="skill-item">اللغة العربية الفصحى</li>
+                            <li class="skill-item">اللغة الإنجليزية</li>
+                            <li class="skill-item">مهارات الكتابة</li>
+                            <li class="skill-item">الخطابة والإلقاء</li>
+                            <li class="skill-item">مهارات الاستماع</li>
+                        </ul>
+                    </div>
+                    <div class="option-link">تصفح مهارات اللغة</div>
+                </div>
+            </a>
+            
+            <!-- خيار المهارات الشخصية -->
+            <a href="soft-skills.html" class="option-wrapper">
+                <div class="option">
+                    <div class="option-header soft-header">المهارات الشخصية</div>
+                    <div class="option-content">
+                        <ul class="skill-list">
+                            <li class="skill-item">التواصل غير اللفظي</li>
+                            <li class="skill-item">مهارات العرض والتقديم</li>
+                            <li class="skill-item">التفاوض وحل النزاعات</li>
+                            <li class="skill-item">التعاطف والذكاء العاطفي</li>
+                            <li class="skill-item">العمل ضمن فريق</li>
+                        </ul>
+                    </div>
+                    <div class="option-link">تصفح المهارات الشخصية</div>
+                </div>
+            </a>
+        </div>
+        
+        <footer>
+            تطوير مهارات الاتصال - خطوة نحو النجاح المهني والشخصي
+        </footer>
+    </div>
+</body>
+</html>

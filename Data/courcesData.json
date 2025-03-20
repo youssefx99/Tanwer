@@ -1,0 +1,60 @@
+{
+  "course_1": {
+    "unit1": {
+      "videos": {
+        "1": "https://youtu.be/dKip3rpuEvY?si=0Sd3yTs-WOelnRi_",
+        "2": "https://youtu.be/wHNUx0w4L8s?si=F3EmKotrFEHaN4KH",
+        "3": "https://youtu.be/dKip3rpuEvY?si=0Sd3yTs-WOelnRi_"
+      },
+      "articels": "./course1/unit1_article.txt",
+      "quiz": "./course1/unit1_quiz.json"
+    },
+    "unit2": {
+      "videos": {
+        "1": "https://youtu.be/54LUCEHM5eA?si=-vym5BvdgO6uN4Du",
+        "2": "https://youtu.be/fqDpl0UwcI8?si=uMLj0eVMOVdGEbgk",
+        "3": "https://youtu.be/dKip3rpuEvY?si=0Sd3yTs-WOelnRi_"
+      },
+      "articels": "./course1/unit2_article.txt",
+      "quiz": "./course1/unit2_quiz.json"
+    },
+    "unit3": {
+      "videos": {
+        "1": "https://youtu.be/LcGhaFtsmoo?si=bhpRo3LNBnDdNmHJ",
+        "2": "https://youtu.be/_x5wo9erObM?si=x4E0q69Yxf3ck520",
+        "3": "https://youtu.be/lV6pMObHVLA?si=ALKGIp9YlBGYGvcI"
+      },
+      "articels": "./course1/unit2_article.txt",
+      "quiz": "./course1/unit2_quiz.json"
+    }
+  },
+  "course_2": {
+    "unit1": {
+      "videos": {
+        "1": "https://youtu.be/mmSbX1Rg2L0?si=qL_NGXhQk4aSE167",
+        "2": "https://youtu.be/wHNUx0w4L8s?si=F3EmKotrFEHaN4KH",
+        "3": "https://youtu.be/dKip3rpuEvY?si=0Sd3yTs-WOelnRi_"
+      },
+      "articels": "./course2/unit1_article.txt",
+      "quiz": "./course2/unit1_quiz.json"
+    },
+    "unit2": {
+      "videos": {
+        "1": "https://youtu.be/54LUCEHM5eA?si=-vym5BvdgO6uN4Du",
+        "2": "https://youtu.be/fqDpl0UwcI8?si=uMLj0eVMOVdGEbgk",
+        "3": "https://youtu.be/dKip3rpuEvY?si=0Sd3yTs-WOelnRi_"
+      },
+      "articels": "./course2/unit2_article.txt",
+      "quiz": "./course2/unit2_quiz.json"
+    },
+    "unit3": {
+      "videos": {
+        "1": "https://youtu.be/LcGhaFtsmoo?si=bhpRo3LNBnDdNmHJ",
+        "2": "https://youtu.be/_x5wo9erObM?si=x4E0q69Yxf3ck520",
+        "3": "https://youtu.be/lV6pMObHVLA?si=ALKGIp9YlBGYGvcI"
+      },
+      "articels": "./course2/unit2_article.txt",
+      "quiz": "./course2/unit2_quiz.json"
+    }
+  }
+}
