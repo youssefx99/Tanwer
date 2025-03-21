@@ -3,6 +3,11 @@
 ## Overview
 Tanweer is an innovative AI-powered learning platform designed to cater to users of all age groups. Leveraging the power of Generative AI, Tanweer offers a personalized and interactive learning experience across various fields and disciplines. The platform is built using modern web technologies including HTML, CSS, JavaScript, Bootstrap, Python, and JSON for file handling.
 
+## How to run the app:
+first go to the main directory and open cmd and type `python -m http.server 8000` then
+go to `HTML/main.html` and then open it (Recommened to open it with "Go live" to load the css style).
+
+
 ## Features
 
 ### 1. AI-Powered Learning
