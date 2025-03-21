@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/CSS/styles_for_cources.css" />
+    <link
+      rel="stylesheet"
+      href="../bootStrap/cdn.jsdelivr.net_npm_bootstrap@4.0.0_dist_css_bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="../bootStrap/cdnjs.cloudflare.com_ajax_libs_font-awesome_5.15.4_css_all.min.css" />
+    <title>Python دورة</title>
+    <style>
+      .video-placeholder {
+        position: relative;
+        text-align: center;
+        background: #f0f0f0;
+        padding: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s;
+      }
+      .video-placeholder:hover {
+        background-color: #e0e0e0;
+      }
+      .video-placeholder i {
+        font-size: 3rem;
+        color: #ff0000;
+        margin-bottom: 10px;
+      }
+      .video-placeholder p {
+        margin: 0;
+        word-break: break-all;
+        display: none; /* Hide the URL text */
+      }
+      .video-item {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Nav Bar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"></nav>
+
+    <!-- Container-->
+    <div class="bacground">
+      <div class="container">
+        <div class="subject-title">
+          <h1>Python دورة</h1>
+          <p>تعلم البرمجة بلغة بايثون</p>
+        </div>
+
+        <!-- Videos Section -->
+        <div class="section-container">
+          <h2>الفيديوهات التعليمية</h2>
+          <div class="video-container">
+            <div class="video-item">
+              <div class="embed-responsive embed-responsive-16by9">
+                <!-- Option 1: Embedded video -->
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/XhQsG1YRvOg" allowfullscreen></iframe>
+                
+                <!-- Option 2: Clickable placeholder 
+                <div class="video-placeholder" data-url="https://youtu.be/XhQsG1YRvOg?si=7ykXCA3hUGbF5fBB">
+                  <i class="fas fa-play-circle"></i>
+                  <span>مشاهدة الفيديو على يوتيوب</span>
+                  <p>https://youtu.be/XhQsG1YRvOg?si=7ykXCA3hUGbF5fBB</p>
+                </div>
+                -->
+              </div>
+              <h3>مقدمة في بايثون</h3>
+            </div>
+
+            <div class="video-item">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/rJyTfqdCvlk" allowfullscreen></iframe>
+              </div>
+              <h3>هياكل البيانات في بايثون</h3>
+            </div>
+
+            <div class="video-item">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/jAtsPIPJirc" allowfullscreen></iframe>
+              </div>
+              <h3>البرمجة الشيئية في بايثون</h3>
+            </div>
+
+            <div class="video-item">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/CATaks_-ewo" allowfullscreen></iframe>
+              </div>
+              <h3>مكتبات بايثون المهمة</h3>
+            </div>
+          
+            <div class="video-item">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/crTQOh6RveM" allowfullscreen></iframe>
+              </div>
+              <h3>تجهيز بيئة العمل</h3>
+            </div>
+            
+            <div class="video-item">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QSoTyJ3iajg" allowfullscreen></iframe>
+              </div>
+              <h3>أهم مشاريع بايثون</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quiz Section -->
+        <div class="section-container">
+          <h2>الاختبارات</h2>
+          <div class="quiz-container">
+            <div class="quiz-item">
+              <div class="quiz-icon">
+                <i class="fas fa-question-circle"></i>
+              </div>
+              <h3>اختبار: أساسيات بايثون</h3>
+              <a href="#" class="btn btn-primary">ابدأ الاختبار</a>
+            </div>
+            <div class="quiz-item">
+              <div class="quiz-icon">
+                <i class="fas fa-question-circle"></i>
+              </div>
+              <h3>اختبار: مكتبات بايثون</h3>
+              <a href="#" class="btn btn-primary">ابدأ الاختبار</a>
+            </div>
+            <div class="quiz-item">
+              <div class="quiz-icon">
+                <i class="fas fa-question-circle"></i>
+              </div>
+              <h3>اختبار شامل</h3>
+              <a href="#" class="btn btn-primary">ابدأ الاختبار</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Articles Section -->
+        <div class="section-container">
+          <h2>المقالات</h2>
+          <div class="articles-container">
+            <div class="article-item">
+              <div class="article-image">
+                <i class="fas fa-file-alt"></i>
+              </div>
+              <div class="article-content">
+                <h3>لماذا تتعلم بايثون؟</h3>
+                <p>تعرف على مميزات لغة بايثون وسبب شعبيتها في مجالات متعددة.</p>
+                <a href="#" class="read-more">اقرأ المزيد</a>
+              </div>
+            </div>
+            <div class="article-item">
+              <div class="article-image">
+                <i class="fas fa-file-alt"></i>
+              </div>
+              <div class="article-content">
+                <h3>تطوير تطبيقات الويب باستخدام بايثون</h3>
+                <p>تعلم كيفية إنشاء مواقع ويب وتطبيقات باستخدام أطر عمل بايثون.</p>
+                <a href="#" class="read-more">اقرأ المزيد</a>
+              </div>
+            </div>
+            <div class="article-item">
+              <div class="article-image">
+                <i class="fas fa-file-alt"></i>
+              </div>
+              <div class="article-content">
+                <h3>تحليل البيانات باستخدام بايثون</h3>
+                <p>استخدام بايثون في تحليل البيانات والإحصاء وعلوم البيانات.</p>
+                <a href="#" class="read-more">اقرأ المزيد</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../Data/myjscode.js"></script>
+    <script
+      src="https://kit.fontawesome.com/9bec9fd168.js"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../bootStrap/all.min.js" />
+    <link rel="stylesheet" href="../bootStrap/bootstrap.bundle.min.js" />
+    <link rel="stylesheet" href="../bootStrap/bootstrap.bundle.min.js.map" />
+
+    <script src="../js/navbar.js" type="module"></script>
+    <script src="../js/main.js" type="module"></script>
+    
+    <!-- JavaScript for video placeholders -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // For option 2: if you want to use clickable placeholders
+        const placeholders = document.querySelectorAll('.video-placeholder');
+        placeholders.forEach(placeholder => {
+          placeholder.addEventListener('click', function() {
+            const videoUrl = this.getAttribute('data-url') || this.querySelector('p').textContent.trim();
+            window.open(videoUrl, '_blank');
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
